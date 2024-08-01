@@ -1,0 +1,48 @@
+implementando Webpay con transbank
+
+1. Creamos un nuevo controlador php artisan make:controller WebpayController
+
+
+
+
+B. Implementando el envio de correos electronicos:
+
+1. Inicamos creando un nuevo controlador php artisan make:controller EmailController
+
+2. Editamos el controlador:
+                                public function index()
+                                    {
+                                        return view('email.index');
+                                    }
+
+3. Creamos la carpeta email y el archivo index.blade.php en Views
+
+4. 
+
+
+**ENVIAR CORREO ELECTRONICO DESDE FORMULARIO DE CONTACTO***
+
+1. Creamos un controllador php artisan make:controller ContactanosController
+
+2. creamos la ruta Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
+
+3. 
+
+--------------------------------
+-VIDEO 120-CREANDO UNA API REST-
+--------------------------------
+
+En Laravel, puedes usar el comando php artisan make:controller con la opción --api 
+para generar un controlador de API que solo incluye los métodos básicos necesarios 
+para una API RESTful. Esto significa que no incluirá los métodos create y edit que 
+se utilizan para las vistas de formularios HTML.
+
+entonces creamos nuestro controlador : php artisan make:controller apiController --api
+
+2. Ubicamos la rutas y selecionamos api.php es aqui donde necesitamos gestionar nuestras rutas para trabajar con
+   API, 
+
+   - Importamos el controlador apiController
+
+   - Ahora definimos el recurso para nuestras peticiones http 
+
