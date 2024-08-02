@@ -50,9 +50,26 @@ B. Implementando el envio de correos electronicos:
 3. Creamos una nueva migracion para insertar campos adicionales relacionada con usuarios.
    la llamaremos usermetadata. php artisan make:migration create_user_metadata_table
 
-4. 
+4. Ubicamos las rutas web.php Importamos el controlador AccesoController
+   Agregamos las rutas para el login y registro de usuarios
+  
+   Route::get('/acceso/login', [AccesoController::class, 'acceso_login'])->name('acceso_login');
+   Route::get('/acceso/registro', [AccesoController::class, 'acceso_registro'])->name('acceso_registro');
 
+5. Ahora pasamos al archivo AccesoController y agregamos lo dos metodos login y registro.
 
+6. Diseñamos el formulario con full bootstrap 5 agregando los campos correspondientes
+
+7. Creamos los Modelos UserMetadata y Perfil:  php artisa make:model Perfil
+
+8. Aplicamos las relaciones entre los modelos UserMetadata y Perfil
+
+9.  Ubicamos el controlador AccesoController, Importamos los dos Modelos a utilizar
+    User-UserMetadata.
+
+    Ademas del Facades Hash para poder cifrar la contraseña use Illuminate\Support\Facades\Hash;
+
+10. 
 
 
 

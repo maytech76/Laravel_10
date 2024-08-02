@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('user_metadata', function (Blueprint $table) {
             $table->id();
-            $table->string('apellidos', 150);
-            $table->string('telefono', 30);
+            $table->string('apellidos');
+            $table->string('telefono');
             $table->string('edad', 10)->nullable();
-            $table->string('direccion')->nullable();
-            $table->string('profesion')->nullable();
+            $table->string('direccion');
+            $table->string('profesion');
 
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

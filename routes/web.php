@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AccesoController;
 use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\WebpayController;
 use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -32,3 +34,9 @@ Route::get('contactanos', function () {
 /* Rutas para gestionar nuestros correos electronicos desde formulario de contacto */
 Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
+
+
+/*Rura para gestionar El login - Registro - Logout del los usuarios*/
+Route::get('acceso/login', [AccesoController::class, 'login'])->name('login');
+Route::get('acceso/registro', [AccesoController::class, 'registro'])->name('registro');
+Route::post('/acceso/post', [AccesoController::class, 'RegistroPost'])->name('acceso.post');
