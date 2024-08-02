@@ -11,7 +11,7 @@ class apiController extends Controller
      */
     public function index()
     {
-        //
+        echo  "Hola Laravel";
     }
 
     /**

@@ -27,6 +27,34 @@ B. Implementando el envio de correos electronicos:
 2. creamos la ruta Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
 
 3. 
+--------------------------------------------------------------
+-VIDEO 80-CREANDO MODELOS CATEGORIAS-PRODUCTOS-PRODUCTOS_FOTOS
+--------------------------------------------------------------
+
+1. Creamos los modelos categorias, productos, PRODUCTOS_FOTOS
+   php artisan make:model Categorias
+
+
+--------------------------------
+-VIDEO 102-CREANDO TABLA PERFIL-
+--------------------------------
+
+1. Ejecutamos el comando para crear un migracion
+   php artisan make:migration create_perfil_table
+
+
+2. Editamos el archivo de migracion
+   agregando 2 campos-> id, nombre
+
+
+3. Creamos una nueva migracion para insertar campos adicionales relacionada con usuarios.
+   la llamaremos usermetadata. php artisan make:migration create_user_metadata_table
+
+4. 
+
+
+
+
 
 --------------------------------
 -VIDEO 120-CREANDO UNA API REST-
